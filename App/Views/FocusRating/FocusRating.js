@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { TextInput, Text, Picker, View, TouchableOpacity, Switch, FlatList } from 'react-native';
-import Card from '../Components/Card';
-import Icon from 'react-native-vector-icons/SimpleLineIcons';
-import LinearGradient from 'react-native-linear-gradient';
+import { View, FlatList } from 'react-native';
+import Card from '../../Components/Card';
 import FocusRatingListItem from './FocusRatingListItem'
 
 const styles = {
