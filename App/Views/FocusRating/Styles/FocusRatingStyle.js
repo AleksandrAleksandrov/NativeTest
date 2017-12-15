@@ -11,11 +11,11 @@ export const ItemStyle = {
 };
 
 export const Border = {
-  color: '#8c8c8c',
-  width: 300,
-  borderWidth: 0.3,
+  backgroundColor: '#8c8c8c',
+  height: 0.3,
 };
 
 export const SwitchStyle = {
-  alignSelf: 'flex-end',
+  alignSelf: 'center',
+  justifyContent: 'center',
 };

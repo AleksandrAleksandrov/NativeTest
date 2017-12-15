@@ -5,18 +5,18 @@ import { BodyText, ItemStyle, Border, SwitchStyle } from './Styles/FocusRatingSt
 export default class FocusRatingListItem extends Component {
 
   render() {
-    const { item } = this.props;
+    const { value, text, onValueChange } = this.props.item;
 
     return (
       <View>
         <View style={ItemStyle}>
           <View style={{ flex: 1 }}>
             <Text style={BodyText}>
-              {item.text}
+              {text}
             </Text>
           </View>
-          <View style={{ width: 60 }}>
-            <Switch style={SwitchStyle} onValueChange={item.onValueChange} />
+          <View style={{ width: 60, alignSelf: 'center' }}>
+            <Switch style={SwitchStyle} onValueChange={onValueChange} value={value}/>
           </View>
         </View>
         <View style={Border}/>

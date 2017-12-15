@@ -9,15 +9,14 @@ import styles from './Styles/NavigationStyles'
 
 // Manifest of possible screens
 const PrimaryNav = TabNavigator({
-  LaunchScreen: { screen: LaunchScreen },
   Dashboard: { screen: DashboardScreen },
-  Project: { screen: ProjectScreen },
+  Project: { screen: LaunchScreen },
   Statistic: { screen: StatisticScreen },
   Tasks: { screen: TasksScreen },
 }, {
   // Default config for all screens
   headerMode: 'none',
-  initialRouteName: 'LaunchScreen',
+  initialRouteName: 'Dashboard',
   navigationOptions: {
     headerStyle: styles.header
   }

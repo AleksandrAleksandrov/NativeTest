@@ -10,7 +10,7 @@ const { width, height } = Dimensions.get('window');
 export default class DashboardScreen extends Component {
   render () {
     return (
-      <LinearGradient start={{x: 0, y: 0}} end={{x: 0, y: 0.9}} colors={['#FF577B', '#FE9B8C']}>
+      <LinearGradient style={{borderWidth: 1,}} start={{x: 0, y: 0}} end={{x: 0, y: 0.9}} colors={['#FF577B', '#FE9B8C']}>
         <Svg
           style={{
             position: 'absolute',
@@ -30,7 +30,6 @@ export default class DashboardScreen extends Component {
           />
         </Svg>
         <View style={{ width: width, height: height}}>
-          <Header/>
           <FocusRating />
         </View>
       </LinearGradient>
