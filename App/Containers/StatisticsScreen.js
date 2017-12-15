@@ -1,16 +1,23 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, Image, View, Dimensions } from 'react-native'
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import { Images } from '../Themes'
 import Header from '../Views/Header/Header';
 import Register from '../Views/Register/Register';
 import Svg,{ Rect } from 'react-native-svg';
 import LinearGradient from 'react-native-linear-gradient';
+import styles from '../Navigation/Styles/NavigationStyles'
 
 const { width, height } = Dimensions.get('window');
 // Styles
-import styles from './Styles/LaunchScreenStyles'
 
 export default class StatisticsScreen extends Component {
+  static navigationOptions = {
+    tabBarIcon: ({ tintColor }) => (
+      <Icon name={'line-chart'} style={styles.navigationTabIcon} color={ tintColor }/>
+    ),
+  };
+
   render () {
     return (
       <LinearGradient start={{x: 0, y: 0}} end={{x: 0, y: 0.9}} colors={['#FF577B', '#FE9B8C']}>

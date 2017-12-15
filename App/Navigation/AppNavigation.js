@@ -17,9 +17,9 @@ const PrimaryNav = TabNavigator({
   // Default config for all screens
   headerMode: 'none',
   initialRouteName: 'Dashboard',
-  navigationOptions: {
-    headerStyle: styles.header
-  }
+  tabBarOptions: {
+    activeTintColor: '#fe6d74',
+  },
 })
 
 export default PrimaryNav
