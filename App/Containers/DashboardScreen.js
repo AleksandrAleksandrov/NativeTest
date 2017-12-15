@@ -1,22 +1,33 @@
 import React, { Component } from 'react'
 import { View, Dimensions } from 'react-native'
-import Header from '../Views/Header/Header';
 import FocusRating from '../Views/FocusRating/FocusRating';
 import Svg,{ Rect } from 'react-native-svg';
 import LinearGradient from 'react-native-linear-gradient';
 
 const { width, height } = Dimensions.get('window');
 
+const styles = {
+  svgStyle: {
+    position: 'absolute',
+    left: -100,
+    top: -20,
+  },
+  mainStyle: {
+    width: width,
+    height: height,
+  },
+};
+
 export default class DashboardScreen extends Component {
   render () {
     return (
-      <LinearGradient style={{borderWidth: 1,}} start={{x: 0, y: 0}} end={{x: 0, y: 0.9}} colors={['#FF577B', '#FE9B8C']}>
+      <LinearGradient
+        start={{x: 0, y: 0}}
+        end={{x: 0, y: 0.9}}
+        colors={['#FF577B', '#FE9B8C']}
+      >
         <Svg
-          style={{
-            position: 'absolute',
-            left: -100,
-            top: -20
-          }}
+          style={styles.svgStyle}
           height="500"
           width="500"
         >
@@ -29,7 +40,7 @@ export default class DashboardScreen extends Component {
             rotate="-25"
           />
         </Svg>
-        <View style={{ width: width, height: height}}>
+        <View style={styles.mainStyle}>
           <FocusRating />
         </View>
       </LinearGradient>

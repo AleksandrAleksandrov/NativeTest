@@ -17,7 +17,7 @@ const styles = {
       height: 15
     },
     shadowRadius: 28,
-    shadowOpacity: 1
+    shadowOpacity: 1,
   },
 };
 

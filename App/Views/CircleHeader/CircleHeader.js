@@ -5,6 +5,10 @@ import { TopStep } from '../../Components/TopStep'
 import { LineBetweenSteps } from '../../Components/LineBetweenSteps'
 
 const styles = {
+  containerMain: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+  },
   buttonText: {
     textAlign: 'center',
     color: '#fff',
@@ -13,24 +17,26 @@ const styles = {
     fontWeight: 'bold',
     marginTop: 16,
   },
+  circleStyle: {
+    width: 53,
+    height: 53,
+  },
 };
 
 const CircleHeader = () => {
   return (
     <View>
-      <View style={{ justifyContent: 'space-between', flexDirection: 'row'}}>
-        <TopStep size={53} step={2}/>
+      <View style={styles.containerMain}>
+        <TopStep step={2}/>
         <LineBetweenSteps/>
-        <TopStepCurrent size={53} step={3}/>
+        <TopStepCurrent step={3}/>
         <LineBetweenSteps/>
-        <TopStep size={53} step={4}/>
+        <TopStep step={4}/>
       </View>
       <Text style={styles.buttonText}>
         Focus rating
       </Text>
     </View>
-
-
   );
 };
 

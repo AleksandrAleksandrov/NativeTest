@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View, FlatList, TouchableOpacity, Text, ScrollView, Dimensions } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+
 import { focusRatingSwitch } from '../../Actions'
 import CircleHeader from '../CircleHeader/CircleHeader'
 import FocusRatingListItem from './FocusRatingListItem'
@@ -10,6 +10,23 @@ import { CardCustom } from '../../Components/CardCustom'
 const { width } = Dimensions.get('window');
 
 const styles = {
+  mainView: {
+    flex: 1,
+    marginTop: 28,
+    marginBottom: 55,
+  },
+  cardWrapper: {
+    flex: 1,
+  },
+  cardStyle: {
+    flex: 1,
+    marginTop: 26,
+    justifyContent: 'space-between',
+  },
+  listWrapper: {
+    flex: 1,
+    justifyContent: 'flex-end',
+  },
   buttonText: {
     textAlign: 'center',
     color: '#fff',
@@ -28,14 +45,22 @@ const styles = {
     height: 65,
     alignItems: 'center',
     justifyContent: 'center',
-  }
+  },
 };
 
 class FocusRating extends Component {
 
   render() {
     const { ratingList, focusRatingSwitch } = this.props;
-    const { shadowStyle, buttonText, button, buttonWrapper } = styles;
+    const {
+      buttonText,
+      button,
+      buttonWrapper,
+      mainView,
+      cardWrapper,
+      cardStyle,
+      listWrapper
+    } = styles;
 
     const list = [
       {
@@ -58,14 +83,14 @@ class FocusRating extends Component {
     ];
 
     return (
-      <View style={{ marginTop: 28, flex: 1, marginBottom: 55,}} >
+      <View style={mainView}>
         <CircleHeader />
-        <View style={{ flex: 1}}>
-          <CardCustom style={{ flex: 1, marginTop: 26, justifyContent: 'space-between' }}>
+        <View style={cardWrapper}>
+          <CardCustom style={cardStyle}>
             <ScrollView
               showsVerticalScrollIndicator={false}
             >
-              <View style={{ flex: 1, justifyContent: 'flex-end', }} >
+              <View style={listWrapper}>
                 <FlatList
                   scrollEnabled={false}
                   data={list}
