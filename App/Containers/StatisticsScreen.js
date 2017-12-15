@@ -6,16 +6,15 @@ import Header from '../Views/Header/Header';
 import Register from '../Views/Register/Register';
 import Svg,{ Rect } from 'react-native-svg';
 import LinearGradient from 'react-native-linear-gradient';
-import navigationStyles from '../Navigation/Styles/NavigationStyles'
+import styles from '../Navigation/Styles/NavigationStyles'
 
 const { width, height } = Dimensions.get('window');
 // Styles
-import styles from './Styles/LaunchScreenStyles'
 
-export default class LaunchScreen extends Component {
+export default class StatisticsScreen extends Component {
   static navigationOptions = {
     tabBarIcon: ({ tintColor }) => (
-      <Icon name={'hourglass'} style={navigationStyles.navigationTabIcon} color={ tintColor }/>
+      <Icon name={'line-chart'} style={styles.navigationTabIcon} color={ tintColor }/>
     ),
   };
 

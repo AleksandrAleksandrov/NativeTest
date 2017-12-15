@@ -12,10 +12,10 @@ const { width, height } = Dimensions.get('window');
 // Styles
 import styles from './Styles/LaunchScreenStyles'
 
-export default class LaunchScreen extends Component {
+export default class TasksScreen extends Component {
   static navigationOptions = {
     tabBarIcon: ({ tintColor }) => (
-      <Icon name={'hourglass'} style={navigationStyles.navigationTabIcon} color={ tintColor }/>
+      <Icon name={'check-square'} style={navigationStyles.navigationTabIcon} color={ tintColor }/>
     ),
   };
 
